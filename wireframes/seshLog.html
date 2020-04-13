@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create skate sesh log wireframe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav role="navigation">Nav</nav>
+  <main role="main">
+    <header>
+      <h1>New Skate-sesh</h1>
+    </header>
+    <section>
+      <form id="record-sesh">
+        <div class="form-section">
+          <label for="sesh-log">Board used</label>
+          <input type="text" name="specs" placeholder="Zero skateboard - 7.75" required>
+        </div>
+        <div class="form-section">
+          <label for="sesh-notes">Sesh notes </label>
+          <textarea name="sesh-notes" rows="10" placeholder="How was the skate-sesh? Did you try any tricks? What do you think you should work on?" required></textarea>
+        </div>
+        <div class="hours-skated-container" class="form-section">
+          <label for="hours-skated">Hours skated</label>
+          <input type="number" name="hours-skated" placeholder="2">
+        </div>
+        <div class="form-section">
+          <p>Tricks tried</p>
+
+          <input type="radio" name="skate-tricks" value="0" class="skate-tricks" checked>
+          <label for="tricks ">
+            <span>flip-tricks</span>
+          </label>
+
+          <input type="radio" name="skate-tricks" value="1" class="skate-tricks">
+          <label for="tricks">
+            <span>shovits</span>
+          </label>
+
+          <input type="radio" name="skate-tricks" value="1" class="skate-tricks">
+          <label for="tricks">
+            <span>Grabs</span>
+          </label>
+
+          <input type="radio" name="skate-tricks" value="1" class="skate-tricks">
+          <label for="tricks">
+            <span>Fakie</span>
+          </label>
+
+          <input type="radio" name="skate-tricks" value="1" class="skate-tricks">
+          <label for="tricks">
+            <span>nollie</span>
+          </label>
+
+          <div class="form-section">
+            <p class="skated-date">Skate-sesh date</p>
+            <input type="number" name="date-month" placeholder="01" min="1" max="12" required=""> .
+            <input type="number" name="date-day" class="date-day" placeholder="01" min="1" max="31" required=""> .
+            <input type="number" name="date-year" class="date-year" placeholder="2017" min="2016" max="2017" required="">
+          </div>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
