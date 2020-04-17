@@ -14,3 +14,4 @@ const SkatelogContext = React.createContext({
   setSkatelog: () => { },
   clearSkatelog: () => { }
 })
+
