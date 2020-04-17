@@ -13,7 +13,7 @@ const SkatelogsApiService = {
         : res.json()
       )
   },
-  getSkateLogs(seshId) {
+  getSeshLogs(seshId) {
     return fetch(`${config.API_ENDPOINT}/skatelogs/${seshId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
