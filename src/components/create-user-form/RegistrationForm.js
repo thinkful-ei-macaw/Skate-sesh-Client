@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Input, Required } from '../Utils/Utils';
-import { Redirect } from 'react-router-dom';
 
 export default class RegistrationForm extends Component {
   static defaultProps = {
