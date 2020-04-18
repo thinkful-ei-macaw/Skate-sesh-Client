@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import SavedLogsList from '../skatelogs/SavedLogsList';
-import Navbar from '../navbar/Navbar';
+import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
+import Header from '../header/Header';
+import { Switch } from 'react-router-dom';
 
 
 
@@ -16,7 +19,16 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Navbar />
+        <header className='App_header'>
+          <Header />
+        </header>
+        <main className='App_main'>
+          {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
+          <Switch>
+
+          </Switch>
+        </main>
+
         <SavedLogsList />
       </div>
     )
