@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SavedLogs from '../saved-sessions/SavedLogs';
+import SavedLogsList from '../skatelogs/SavedLogsList';
 import Navbar from '../navbar/Navbar';
 
 
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Navbar />
-        <SavedLogs />
+        <SavedLogsList />
       </div>
     )
   }
