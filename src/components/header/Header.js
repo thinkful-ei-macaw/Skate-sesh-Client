@@ -4,7 +4,7 @@ import { Hyph } from '../Utils/Utils';
 import TokenService from '../../services/token-service';
 import './header.css';
 
-export default class Heade extends Component {
+export default class header extends Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
   }

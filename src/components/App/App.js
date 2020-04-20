@@ -4,6 +4,9 @@ import PrivateRoute from '../Utils/PrivateRoute';
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 import Header from '../header/Header';
 import SkateLogsListPage from '../../routes/SkatelogsListPage';
+import LoginPage from '../../routes/LoginPage';
+import RegistrationPage from '../../routes/RegistrationPage';
+import NotFoundPage from '../../routes/NotFoundPage';
 
 
 
@@ -29,6 +32,21 @@ class App extends Component {
               exact
               path={'/'}
               component={SkateLogsListPage}
+            />
+            <PublicOnlyRoute
+              path={'/login'}
+              component={LoginPage}
+            />
+            <PublicOnlyRoute
+              path={'/register'}
+              component={RegistrationPage}
+            />
+            <PrivateRoute
+              path={'/skatelogs/:articleId'}
+              component={SkateLogsListPage}
+            />
+            <Route
+              component={NotFoundPage}
             />
           </Switch>
         </main>
