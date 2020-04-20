@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SkatelogListContext from '../contexts/SkatelogListContext';
 import SkatelogsApiService from '../services/skatelogs-api-service';
 import { Section } from '../components/Utils/Utils';
-import SavedLogsList from '../components/skatelogs/SavedLogsList';
+import SavedLogsList from '../components/skatelogListItem/SkateLogListItem';
 
 export default class SkatelogsListPage extends Component {
 

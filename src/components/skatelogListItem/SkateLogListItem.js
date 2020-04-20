@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { NiceDate, Hyph } from '../Utils/Utils';
-import './SkateLogListItem.css';
+import './SkatelogListItem.css';
 
 
 
@@ -18,11 +18,8 @@ export default class SkateLogListItem extends Component {
           <SkatelogDate skatelog={skatelog} />
         </header>
         <footer className='SkatelogListItem_footer'>
-          <SkatelogStyle skatelog={skatelog} />
-          {skatelog.author.id && <>
-            <Hyph />
-            <SkatelogAuthor skatelog={skatelog} />
-          </>}
+          <Hyph />
+          <SkatelogAuthor skatelog={skatelog} />
           <SkatelogCommentCount skatelog={skatelog} />
         </footer>
       </Link>
@@ -30,3 +27,33 @@ export default class SkateLogListItem extends Component {
   }
 }
 
+
+function SkatelogDate({ skatelog }) {
+  return (
+    <span className='SkatelogListItem_date'>
+      <NiceDate
+        date={skatelog.date_created} />
+    </span>
+  )
+}
+
+function SkatelogAuthor({ skatelog }) {
+  return (
+    <span className='SkatelogListItem_author'>
+      {skatelog.author.full_name}
+    </span>
+  )
+}
+
+function SkatelogCommentCount({ skatelog }) {
+  return (
+    <span
+      className='SkatelogListItem_comment-count fa-layers fa-fw'>
+      <span
+        className='fa-layers-text fa-inverse'>
+        {skatelog.number_of_comments}
+      </span>
+    </span>
+
+  )
+}
