@@ -9,17 +9,9 @@ body {
 
 nav {
   display: flex;
+  padding: .6em;
   background: rgba(19, 15, 15, 0.952);
   color: white;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline;
-  padding: 2em;
 }
 
 a {

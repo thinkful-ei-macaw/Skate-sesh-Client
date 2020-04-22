@@ -43,7 +43,7 @@ class App extends Component {
               component={RegistrationPage}
             />
             <PrivateRoute
-              path={'/skatelogs/:seshId'}
+              path={'/skatelogs/:sesh_Id'}
               component={SkatelogPage}
             />
             <Route
