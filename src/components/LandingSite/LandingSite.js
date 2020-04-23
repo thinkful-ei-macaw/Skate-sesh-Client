@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import './LandingSite.css';
 
 
 
@@ -11,13 +11,12 @@ export default class LandingSite extends Component {
 
   render() {
     return (
-      <Link to={'/'}
-        className='LandingSite'>
+      <div>
         <h1 className='homePage'>
-          Skatesesh HomePage
+          Welcome Home
         </h1>
-        <p>Everything you need to get you started</p>
-      </Link>
+        <p>Everything you need, to get you started</p>
+      </div>
     )
   }
 }
