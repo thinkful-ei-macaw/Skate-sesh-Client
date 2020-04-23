@@ -8,6 +8,7 @@ import SkatelogPage from '../../routes/SkatelogPage';
 import LoginPage from '../../routes/LoginPage';
 import RegistrationPage from '../../routes/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage';
+import LandingSitePage from '../../routes/LandingSitePage';
 
 
 
@@ -31,8 +32,14 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path={'/skatelogs'}
+              path={'/'}
+              component={LandingSitePage}
+            />
+            <Route
+              exact
+              path={'/'}
               component={SkateLogsListPage}
+            />
             />
             <PublicOnlyRoute
               path={'/login'}

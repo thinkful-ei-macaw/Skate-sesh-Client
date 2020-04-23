@@ -37,11 +37,23 @@ export default class header extends Component {
     )
   }
 
+  renderHomeLink() {
+    return (
+      <div className='Header_homeLink'>
+        <Link
+          to='/'>
+          Skate-Sesh
+          </Link>
+      </div>
+    )
+  }
+
+
   render() {
     return (
       <nav className='Header'>
         <h1>
-          Skate-Sesh
+          {this.renderHomeLink()}
         </h1>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
